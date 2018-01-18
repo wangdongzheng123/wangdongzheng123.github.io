@@ -1,0 +1,276 @@
+/* 最外层的容器 */
+.jd_container{
+	width: 100%;
+	background-color:#ccc;
+}
+
+/*顶部通栏*/
+.jd_header{
+	height:40px;
+	width:100%;
+	/*background-color: rgb(201,21,35);*/
+	position:fixed;
+	/*因为层级关系*/
+	z-index: 5;
+
+	/*设置padding 把input挤进去*/
+	padding-left:70px;
+	padding-right:60px;
+
+	/*css设置透明度*/
+	background-color: rgba(201,21,35,0)
+}
+
+.jd_header .header_logo{
+	width:60px;
+	height:36px;
+	position: absolute;
+	left:5px;
+	top:2px;
+	/*设置背景图片*/
+	background-image:url("../images/sprites.png");
+	background-repeat: no-repeat;
+	background-position:0 -103px ;/*所以定位的高也缩小1倍*/
+
+	/*设置背景图片的大小 压缩了一倍 目的是为了防止用户看到像素粒*/
+	background-size:200px 200px;/*设置的是整张图片 压缩一倍*/
+}
+.header_search{
+	width:100%;
+	line-height:30px;
+	margin-top:5px;
+	border-radius: 15px;
+	padding-left:26px;
+}
+.header_login{
+	position: absolute;
+	right:10px;
+	top:0px;
+	color:#fff;
+	font-size: 17px;
+	line-height: 40px;
+}
+.header_glass{
+	width:20px;
+	height:20px;
+	background-image: url('../images/sprites.png');
+	background-size: 200px 200px;
+	background-position: -60px -109px;
+	packground-repeal:no-repeat;
+	position:absolute;
+	top:10px;
+	left:76px;
+}
+
+/*轮播图*/
+.jd_banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.jd_banner .banner_images{
+	/*10倍的宽度，为了可以放10张图片 一张图片的宽度是10%*/
+	width:1000%;
+	/*默认 移动一个 屏幕的宽度 注意是负数*/
+	transform:translateX(-10%);
+
+}
+.jd_banner .banner_images li{
+	width:10%;
+	float:left;
+}
+.jd_banner .banner_images a{
+	width:100%;
+	display: block;
+}
+.jd_banner .banner_images img{
+	width:100%;
+	display: block;
+}
+
+/*轮播图里面的 索引标签*/
+.jd_banner .banner_index{
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	margin-left:-44px;
+}
+.jd_banner .banner_index li{
+	width:6px; height:6px;
+	border-radius: 50%;
+	border:1px solid #fff;
+	float:left;
+	margin-left:5px;
+}
+.jd_banner .banner_index li.current{
+	background-color:#fff;
+}
+
+/*导航栏*/
+.jd_nav{
+	width:100%;
+	border:1px solid #ccc;
+	background-color: #fff;
+}
+.jd_nav ul{
+	width:100%;
+	padding-top:5px;
+}
+.jd_nav ul li{
+	width:25%;
+	float:left;
+}
+.jd_nav ul li a{
+	width:100%;
+	display: block;
+}
+.jd_nav ul li a img{
+	width:60%;
+	display: block;
+	margin:0 auto;
+}
+.jd_nav ul li a p{
+	text-align: center;
+	color:#333333;
+	padding:5px 0;
+
+}
+
+/*内容部分*/
+.jd_main{
+	width:100%;
+	padding:0 5px;
+	margin-top:10px;
+}
+.jd_main .main_content{
+	width:100%;
+	background-color: #fff;
+	min-height: 150px;
+	margin-bottom: 5px;
+	box-shadow: 0 0 2px gray ;
+}
+.jd_main .content_top{
+	width:100%;
+	height:32px;
+	border-bottom: 1px solid #eee;
+}
+.jd_main .content_bottom{
+	width:100%;
+}
+
+.jd_main .main_content:nth-child(1) .content_top{
+	border-bottom:none;
+}
+.jd_main .main_content:nth-child(1) .content_top span{
+	width:20px;
+	height:25px;
+	background-image: url("../images/seckill-icon.png");
+	background-size:20px 25px ;
+	float:left;
+	margin-left:5px;
+	margin-top:3.5px;
+}
+.jd_main .main_content:nth-child(1) .content_top p{
+	float:left;
+	line-height: 32px;
+	color:red;
+	margin-left:5px;
+}
+.jd_main .main_content:nth-child(1) .content_top ul{
+	height:32px;
+	float:left;
+	padding-top:8.5px;
+}
+.jd_main .main_content:nth-child(1) .content_top ul li{
+	float:left;
+	width:15px;
+	height:15px;
+	margin-left:3px;
+	line-height: 15px;
+	color:#fff;
+	background-color: #000;
+	text-align: center;
+}
+
+/*这样可以取到 第三个 第六个*/
+.jd_main .main_content:nth-child(1) .content_top ul li:nth-child(3n){
+	background-color:#fff;
+	color:#000;
+}
+.jd_main .main_content:nth-child(1) .content_top a{
+	margin-right:10px;
+	color:#B4B4B4;
+	line-height: 32px;
+}
+
+.jd_main .main_content:nth-child(1) .content_bottom{
+	width:100%;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul{
+	width:100%;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li{
+	/*为了保证零头 不影响布局
+		假设给的是33%
+			父盒子的宽度是100
+			父盒子的宽度是1000
+	*/
+	width:33.333%;
+	float:left;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li a{
+	display: block;
+	width:100%;
+	border-right: 1px solid #eee;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li:last-child a{
+	border:none;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li a img{
+	display: block;
+	width:60%;
+	margin:0 auto;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li p{
+	text-align: center;
+	font-size: 12px;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul li p:nth-child(2){
+	 color:rgb(201,21,35);
+ }
+.jd_main .main_content:nth-child(1) .content_bottom ul li p:nth-child(3){
+	color:black;
+	text-decoration:line-through;
+}
+/*除去第一个盒子，其他盒子的样式*/
+.jd_main .main_content:nth-child(n+2) .content_top{  }
+.jd_main .main_content:nth-child(n+2) .content_top span{
+	color:rgb(201,21,35);
+	line-height: 32px;
+	position: relative;
+	margin-left:15px;
+}
+.jd_main .main_content:nth-child(n+2) .content_top span:before{
+	content: '';
+	position: absolute;
+	left:-10px;
+	top:1.5px;
+	width:5px;
+	height:15px;
+	background:red;
+
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul{
+	width: 100%;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul li{
+	width:50%;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul li a{
+	display: block;
+	width:100%;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul li a img{
+	display: block;
+	width:100%;
+}

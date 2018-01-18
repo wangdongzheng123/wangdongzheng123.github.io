@@ -1,0 +1,118 @@
+/*less 编译公共样式*/
+.aImg {
+  display: block;
+  width: 100%;
+}
+/*公共样式*/
+.header .main {
+  width: 100%;
+}
+.list_container {
+  height: 100%;
+}
+.list_container .main {
+  height: 100%;
+}
+/* 列表页的样式 */
+.header {
+  height: 45px;
+  background-image: url("../images/header-bg.png");
+  background-size: 1px 44px;
+  border-repeat: repeat-x;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 50px;
+  z-index: 988;
+}
+.header a:nth-child(1) {
+  line-height: 45px;
+  font-size: 35px;
+  font-family: '宋体';
+  position: absolute;
+  left: 10px;
+}
+.header input {
+  width: 100%;
+  height: 31px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  margin-top: 7px;
+  padding-left: 5px;
+}
+.header a:last-child {
+  width: 40px;
+  height: 44px;
+  background-image: url("../images/sprites.png");
+  background-size: 200px 200px ;
+  background-position: -60px 0;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  /*css3样式 从内容区域添加背景 裁决背景*/
+  background-origin: content-box;
+  background-clip: content-box;
+  padding: 12px 10px;
+}
+/*内容区域*/
+.main .main_left {
+  width: 90px;
+  height: 100%;
+}
+.main .main_left ul {
+  width: 100%;
+}
+.main .main_left ul li {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #eee ;
+  border-right: 1px solid #eee ;
+}
+.main .main_left ul li.current a {
+  color: red;
+}
+.main .main_left ul li a {
+  color: #606060;
+  width: 100%;
+  display: block;
+}
+.main .main-right {
+  overflow: hidden;
+  padding: 10px 10px;
+}
+.main .main-right a {
+  display: block;
+  width: 100%;
+}
+.main .main-right a img {
+  display: block;
+  width: 100%;
+}
+.main .main-right h3 {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.main .main-right ul {
+  width: 100%;
+  padding-top: 10px;
+}
+.main .main-right ul li {
+  float: left;
+  width: 33.3333%;
+}
+.main .main-right ul li a {
+  display: block;
+  width: 100%;
+}
+.main .main-right ul li a img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.main .main-right ul li a p {
+  text-align: center;
+  color: #606060;
+  padding: 4px 0;
+  font-size: 13px;
+}

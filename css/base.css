@@ -1,0 +1,66 @@
+/*设置最外层的盒子 跟显示的页面一样大（跟移动端的设置尺寸一样大）*/
+html,body{height:100%;}
+body{
+	overflow: hidden;}
+*,
+::before,
+::after{
+	font-size:14px;
+	margin:0;
+	padding:0;
+	list-style: none;
+
+	/*点击高亮效果 手指点击 清除默认样式 高亮效果透明*/
+	-webkit-tap-highlight-color: transparent;
+
+	/*盒子模型 * /
+	/*快捷方式 box-sizing +tab*/
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* 统一设置文字  sans-serif 移动端 的默认字体 */
+	font-family: '微软雅黑',sans-serif;
+}
+
+/*input标签 去掉默认衍生*/
+input{
+
+	border:none;
+	-webkit-perspective: none;
+}
+
+/*a标签去掉下划线*/
+a{
+	text-decoration: none;
+}
+
+/*常用的左右浮动*/
+.f_l{
+	float:left;
+}
+.f_r{
+	float:right;
+}
+/*双伪类 清除浮动*/
+.clearfix::before,
+.clearfix::after{
+	content: '';
+	display: block;
+	line-height: 0;
+	height:0;
+	visibility: hidden;/*隐藏元素*/
+	clear:both;
+}
+/*边框*/
+.b_t{
+	border-top:1px solid #eee;
+}
+.b_b{
+	border-bottom:1px solid #eee;
+}
+.b_r{
+	border-right:1px solid #eee;
+}
+.b_l{
+	border-left:1px solid #eee;
+}

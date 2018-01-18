@@ -1,0 +1,31 @@
+//less
+
+//注释 less支持js一样的注释 但不会编译
+/*使用css 注释 会编译 该注释也会出现在 css文件里*/
+
+// 变量名：变量值
+@jdRed:rgb(201,21,35);
+//定义宽度
+@minWidth:100px;
+//定义图片尺寸
+@imageSize:100px 100px;
+.width{
+  width:100px;
+  height:200px;
+}
+
+body{  background-color: @jdRed; .width(); }
+h3{
+  background-color: @jdRed;
+  background-size: @imageSize;
+}
+
+//用变量名定义为变量值
+@vars: "I am fnord.";
+@var: 'fnord';
+
+ul li::before{
+  content: @vars;
+  width:@minWidth;
+
+}
